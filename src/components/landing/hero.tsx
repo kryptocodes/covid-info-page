@@ -13,22 +13,22 @@ const Hero: React.FC<heroProps> = ({}) => {
               COVID-19 Alert
             </h1>
             <h2 className="text-4xl text-corona-green">
-              Stay at Home quarantine To stop Corona virus
+              Stay at Home Quarantine <br/> To stop Corona virus
             </h2>
             <p className="mb-8 mt-4 leading-relaxed">
               There is no specific medicine to prevent or treat coronavirus
               disease (COVID-19). People may need supportive care to .
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex rounded-full text-white bg-corona border-2 border-corona py-4 px-8 focus:outline-none hover:text-corona hover:bg-transparent text-lg">
-                Let Us Help 
+              <button className="inline-flex rounded-full text-white bg-corona border-2 border-corona py-2 px-8 focus:outline-none hover:text-corona hover:bg-transparent text-sm">
+                Let Us Help
               </button>
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 ">
             <Image
               className=" rounded mr-auto flex object-cover object-fit"
-              src={require("../../../assets/landing_1.png")}
+              src={require("../../assets/landing_1.png")}
               alt="hero"
             />
           </div>

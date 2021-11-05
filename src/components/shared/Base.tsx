@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer';
 import NavBar from './NavBar';
 
 interface BaseProps {
@@ -10,6 +11,7 @@ const Base: React.FC<BaseProps> = ({children}) => {
             <React.Fragment>
                 <NavBar/>
                 {children}
+                <Footer/>
             </React.Fragment>
 
         );

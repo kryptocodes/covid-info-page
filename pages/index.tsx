@@ -1,7 +1,11 @@
 import { NextPage } from 'next';
 import React from 'react'
 import Base from '../src/components/shared/Base';
-import Hero from '../src/components/shared/landing/hero';
+import Contagion from '../src/components/landing/contagion';
+import Hero from '../src/components/landing/hero';
+import Symptoms from '../src/components/landing/Symptoms';
+import WhatIs from '../src/components/landing/WhatIs';
+import WhatShouldWeDo from '../src/components/landing/WhatShouldWeDo';
 
 
 const index: React.FC<NextPage> = ({}) => {
@@ -9,6 +13,10 @@ const index: React.FC<NextPage> = ({}) => {
       <>
         <Base>
           <Hero />
+          <WhatIs />
+          <Contagion />
+          <Symptoms />
+          <WhatShouldWeDo />
         </Base>
       </>
     );
