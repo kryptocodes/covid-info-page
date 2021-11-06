@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import 'tailwindcss/tailwind.css'
 
 import 'leaflet/dist/leaflet.css'
 
