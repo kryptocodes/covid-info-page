@@ -3,9 +3,7 @@ import Stats from "../Map/Stats";
 
 import dynamic from "next/dynamic";
 
-interface LiveDataProps {
-  sortedData: any | [] | Array<any>;
-}
+
 
 
 const sortData = (data:any) => {
@@ -20,7 +18,7 @@ const sortData = (data:any) => {
   return sortedData;
 };
 
-const LiveData: React.FC<LiveDataProps> = ({}) => {
+const LiveData: React.FC<any> = () => {
     const [mapCenter, setMapCenter] = React.useState({ lat: 20.80746, lng: 40.4796 });
     const [mapZoom, setMapZoom] = React.useState(3);
     const [mapCountries, setMapCountries] = React.useState([]);
@@ -32,7 +30,7 @@ const LiveData: React.FC<LiveDataProps> = ({}) => {
            {
            let sortedData = sortData(data);
            setData(sortedData);
-           setMapCountries(sortedData.slice(0, 10));
+           setMapCountries(sortedData.slice(0, 10) as any);
           })
         
     }, [])
@@ -56,7 +54,7 @@ const LiveData: React.FC<LiveDataProps> = ({}) => {
   <div className="w-full  ">
 
   
-  <div className="sm:absolute right-0 sm:mr-8 w-full sm:w-2/6 sm:-mt-4 " style={{zIndex:'9999'}} >
+  <div className="sm:absolute right-0 sm:mr-8 w-full sm:w-2/6 sm:-mt-4 " style={{zIndex:9999}} >
     
   <Component />
     </div>
