@@ -6,7 +6,7 @@ interface heroProps {}
 const Hero: React.FC<heroProps> = ({}) => {
   const Component = () => (
     <>
-      <section className="text-gray-600 mx-auto">
+      <section className="text-gray-600 mx-auto" id="overview">
         <div className="flex py-24 md:flex-row flex-col items-center ">
           <div className="lg:flex-grow md:w-1/2 px-5 lg:px-40 md:px-10 lg:pr-24 sm:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className=" sm:text-2xl text-2xl mb-2 text-corona">

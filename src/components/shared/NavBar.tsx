@@ -5,30 +5,36 @@ interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = ({}) => {
   const [menu, setMenu] = useState(false);
+  let Location:any = undefined
+  if (typeof window !== "undefined") {
+    Location = window.location.hash;
+    
+  }
+ 
   const Data = [
     {
       name: "Overview",
-      link: "/",
+      link: "#overview",
     },
     {
       name: "Contagion",
-      link: "/contagion",
+      link: "#contagion",
     },
     {
       name: "Symptoms",
-      link: "/symptoms",
+      link: "#symptoms",
     },
     {
       name: "Prevention",
-      link: "/prevention",
+      link: "#prevention",
     },
   ];
 
   const NavBarComponent = () => (
     <>
       <header className="text-gray-600 lg:mx-40">
-        <div className="container mx-auto p-5 flex   ">
-          <a className="md:flex items-center text-corona-green sm:block uppercase mb-4 md:mb-0">
+        <div className="container mx-auto p-5 flex">
+          <a className="md:flex flex items-center text-corona-green sm:block uppercase mb-4 md:mb-0">
             <Image
               src={require("../../assets/logo.png")}
               alt="logo"
@@ -38,20 +44,23 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
           </a>
           <nav className="md:ml-auto flex flex-wrap p-4 items-center justify-center hidden md:block">
             {Data.map((v, i) => (
-              <a key={i} className="mr-5 hover:text-corona">
+              
+            
+              <a href={v?.link} key={i} className={`mr-5 text-corona-green hover:text-corona ${Location === v?.link ? 'text-corona' : '' }`}>
                 {v?.name}
               </a>
             ))}
+            
 
             <button className="bg-transparent rounded-full border-2 border-corona px-4 p-2 text-corona hover:bg-corona hover:text-white  ">
               Contact
             </button>
           </nav>
 
-          <div className="block md:hidden lg:hidden  ml-auto">
+          <div className="block md:hidden lg:hidden p-4  ml-auto">
             <button
               onClick={() => setMenu(!menu)}
-              className="flex items-center mx-auto px-3 py-2 text-corona"
+              className="flex text-corona"
             >
               {menu ? (
                 <svg
@@ -87,19 +96,24 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
             </button>
           </div>
 
-          {menu ? <div className="md:hidden w-full mt-20 absolute text-left overflow-hidden " id="mobile-menu">
-          <div style={{backgroundColor:'#FFF9F9'}} className="pb-3 p-4 space-y-1">
+          {menu ? <div className="md:hidden w-full mt-20 px-4 absolute inset-0  text-left overflow-hidden " id="mobile-menu">
+          <div style={{backgroundColor:'#FFF9F9'}} className="pb-3  p-4 py-5 space-y-1">
             {Data.map((v,i) => 
             <span key={i}>
            
             <a
-              className="block py-5 rounded-md text-lg font-medium"
+              onClick={() => setMenu(!menu)}
+              href={v?.link}
+              className={`block py-5 text-corona-green font-medium hover:text-corona ${Location === v?.link ? 'text-corona' : ''} `}
             >
              {v?.name}
             </a>
 
             </span>
           )}
+           <a href={"#contact"} className="bg-transparent rounded-full  border-2 border-corona px-4  py-2 text-corona hover:bg-corona hover:text-white  ">
+              Contact
+            </a>
           </div>
         </div> : "" }
         </div>

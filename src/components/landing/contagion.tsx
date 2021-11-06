@@ -53,7 +53,7 @@ const Contagion: React.FC<any> = ({}) => {
 
   const Component = () => (
     <>
-      <section>
+      <section id="contagion">
         <div className="container px-5  mx-auto   ">
           <div className="flex flex-col text-center w-full mb-20">
             <h2 className="text-lg text-corona  font-medium title-font mb-1">

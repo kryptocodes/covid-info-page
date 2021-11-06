@@ -6,6 +6,7 @@ import Hero from '../src/components/landing/hero';
 import Symptoms from '../src/components/landing/Symptoms';
 import WhatIs from '../src/components/landing/WhatIs';
 import WhatShouldWeDo from '../src/components/landing/WhatShouldWeDo';
+import LiveData from '../src/components/landing/LiveData';
 
 
 const index: React.FC<NextPage> = ({}) => {
@@ -17,6 +18,7 @@ const index: React.FC<NextPage> = ({}) => {
           <Contagion />
           <Symptoms />
           <WhatShouldWeDo />
+          <LiveData />
         </Base>
       </>
     );

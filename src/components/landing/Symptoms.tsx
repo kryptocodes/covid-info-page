@@ -7,7 +7,7 @@ interface SymptomsProps {
 
 const Symptoms: React.FC<SymptomsProps> = ({}) => {
         const Component = () => (
-            <section>
+            <section id="symptoms">
                   <div className="container px-5  mx-auto   ">
           <div className="flex flex-col text-center w-full mb-4">
             <h2 className="text-lg text-corona  font-medium title-font mb-1">
