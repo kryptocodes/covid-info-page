@@ -21,7 +21,7 @@ const Symptoms: React.FC<SymptomsProps> = ({}) => {
             </p>
           </div>
         </div>
-            <div className="container mx-auto w-3/6 ">
+            <div className="container mx-auto md:w-3/6 w-5/6 ">
                     <Image className='object-cover object-center h-full w-full' src={require('../../assets/symptoms.png')} alt="Symptoms" />
                 </div>
             </section>

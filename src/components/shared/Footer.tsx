@@ -27,12 +27,12 @@ const Footer: React.FC<FooterProps> = ({}) => {
     <>
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center">
-          <h1 className="text-corona-green font-bold text-center text-4xl">
+          <h1 className="text-corona-green font-bold text-center text-2xl  md:text-4xl">
             Have Question in mind? <br /> Let us help you
           </h1>
         </div>
 
-        <div className="sm:flex shadow w-1/2 mx-auto mt-4 items-center bg-white rounded-lg overflow-hidden px-2 py-4 rounded-full justify-between">
+        <div className="flex  shadow w-full sm:w-1/2 lg:w-1/2 mx-auto mt-4 items-center bg-white rounded-lg overflow-hidden px-2 py-4 rounded-full justify-between">
           <input
             className="text-base text-gray-400 flex-grow outline-none px-2 "
             type="text"
@@ -56,7 +56,7 @@ const FooterContent = () => (
         <Image src={require('../../assets/logo.png')} alt="logo" width={50} height={50} />
       <span className="ml-3 text-xl">Covid-19</span>
     </a>
-    <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4 ">
+    <span className="md:inline-flex grid grid-col-1 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4 ">
         {Data.map((item, index) => (
         <a key={index} className="ml-3 text-gray-500">
             {item.name}

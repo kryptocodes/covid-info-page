@@ -35,7 +35,7 @@ const Contagion: React.FC<any> = ({}) => {
     image,
   }) => (
     <>
-      <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center border-b-4 hover:border-corona hover:shadow-md">
+      <div className="w-full bg-white rounded-lg lg:p-12 p-4 flex flex-col justify-center items-center border-b-4 hover:border-corona hover:shadow-lg">
         <div className="mb-8">
           <Image
             className="object-center h-36 w-36"
@@ -62,13 +62,13 @@ const Contagion: React.FC<any> = ({}) => {
             <h1 className="sm:text-3xl text-4xl font-medium title-font mb-4 text-corona-green">
               Contagion
             </h1>
-            <p className="lg:w-3/6 mx-auto text-gray-500 leading-relaxed text-base">
+            <p className="lg:w-3/6 md:w-3/4 mx-auto text-gray-500 leading-relaxed text-base">
               Corona viruses are a type of virus. There are many different
               kinds, and some cause disease. A newly identified type
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:p-28 p-4 -mt-20 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:p-28 p-4 md:p-8 -mt-20 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {Data.map((item, index) => (
             <React.Fragment key={index}>
               <CardComponent

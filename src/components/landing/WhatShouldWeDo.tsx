@@ -29,19 +29,19 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
 
   const Content:React.FC<WhatShouldWeDoProps> = ({i,title,description}) => (
     <>
-      <div className="container mx-auto flex px-5 pl-20 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center p-20">
-        <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-corona bg-opacity-20 text-corona mb-4 flex-shrink-0">
+      <div className="container mx-auto flex sm:px-5 lg:pl-20 md:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center sm:p-20">
+        <span className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-corona bg-opacity-20 text-corona mb-4 flex-shrink-0">
               0{i+1}
-          </div>
+          </span>
          
           <h1 className="text-4xl text-corona-green mb-4">{title}</h1>
-          <p className="mb-8 leading-relaxed text-sm w-5/6">
+          <p className="mb-8 leading-relaxed text-corona-green text-sm sm:w-full p-2 space-y-2 w-4/5 lg:w-5/6">
             {description}
           </p>
         
         </div>
-        <div className={`lg:max-w-lg lg:w-1/3 md:w-1/2 w-5/6 mb-10 p-5 md:mb-0 ${i % 2 == 0 ? 'order-last' : 'order-first'}`}>
+        <div className={`lg:max-w-lg lg:w-1/3 md:w-1/2 w-5/6 mb-10 p-5 order-first md:mb-0 ${i % 2 == 0 ? 'sm:order-last' : 'sm:order-first'}`}>
           <Image
             className="object-cover object-center rounded"
             alt="hero"
@@ -62,13 +62,13 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
           <h1 className="sm:text-3xl text-4xl font-medium title-font mb-4 text-corona-green">
             What Should We Do
           </h1>
-          <p className="lg:w-3/6 mx-auto text-gray-500 leading-relaxed text-base">
+          <p className="lg:w-3/6 md:w-3/4 mx-auto text-gray-500 leading-relaxed text-base">
             Corona viruses are a type of virus. There are many different kinds,
             and some cause disease. A newly identified type has caused
           </p>
         </div>
       </div>
-      <div className="p-10">
+      <div className="lg:p-10">
           {Data.map((item,i) => <Content key={i} i={i} title={item.title} description={item.description}/>)}
       </div>
     </section>
