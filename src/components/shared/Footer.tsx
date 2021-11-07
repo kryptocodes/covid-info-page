@@ -45,14 +45,14 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div
           aria-hidden="true"
-          className="absolute overflow-hidden   top-0 sm:right-20  w-[50px] h-[20px] opacity-50"
+          className="absolute hidden sm:block  top-0 sm:right-20  w-[50px] h-[20px] opacity-50"
         >
           <Image
             src={require("../../assets/path1471.png")}
             height={"100px"}
             width={"100px"}
-            className="sm:w-[10px] sm:h-[10px]  ml-3 mt-3"
-            alt="hero"
+            className="sm:w-[10px] sm:h-[10px] "
+            alt="path1471"
           />
         </div>
         <div

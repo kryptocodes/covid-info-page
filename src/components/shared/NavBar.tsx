@@ -99,7 +99,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
 
           {menu ? (
             <div
-              className="md:hidden w-full mt-20 px-4 absolute inset-0  text-left overflow-hidden "
+              className="md:hidden  w-full mt-20 px-4 absolute inset-0  text-left overflow-hidden "
               id="mobile-menu"
             >
               <div
@@ -119,6 +119,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
                     </a>
                   </span>
                 ))}
+                <div className="-ml-1 ">
                 <a
                   href={"#contact"}
                   className="bg-transparent rounded-full  border-2 border-corona px-4  py-2 text-corona hover:bg-corona hover:text-white  "
@@ -126,6 +127,8 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
                   Contact
                 </a>
               </div>
+              </div>
+
             </div>
           ) : (
             ""
