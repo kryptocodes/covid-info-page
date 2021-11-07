@@ -35,7 +35,7 @@ const Contagion: React.FC<any> = ({}) => {
     image,
   }) => (
     <>
-      <div className="w-full bg-white rounded-lg lg:p-12 p-4 flex flex-col justify-center items-center border-b-4 hover:border-corona hover:shadow-lg">
+      <div className="w-full bg-white z-50 rounded-lg lg:p-12 p-4 flex flex-col justify-center items-center border-b-4 hover:border-corona hover:shadow-lg">
         <div className="mb-8">
           <Image
             className="object-center h-36 w-36"
@@ -54,7 +54,7 @@ const Contagion: React.FC<any> = ({}) => {
   const Component = () => (
     <>
       <section id="contagion">
-        <div className="container px-5  mx-auto   ">
+        <div className="container px-5  mx-auto ">
           <div className="flex flex-col text-center w-full mb-20">
             <h2 className="text-lg text-corona  font-medium title-font mb-1">
               Covid-19
@@ -68,7 +68,17 @@ const Contagion: React.FC<any> = ({}) => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:p-28 p-4 md:p-8 -mt-20 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 relative  sm:grid-cols-2 lg:p-28 p-4 md:p-8 -mt-20 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          <div
+            aria-hidden="true"
+            className="absolute z-0 hidden sm:block bottom-10 left-0 w-[50px] h-[20px] rounded-full grid place-items-center"
+          >
+            <Image
+              src={require("../../assets/path1471.png")}
+              className="sm:w-[50x]  overflow-hidden sm:h-[52px] "
+              alt="hero"
+            />
+          </div>
           {Data.map((item, index) => (
             <React.Fragment key={index}>
               <CardComponent

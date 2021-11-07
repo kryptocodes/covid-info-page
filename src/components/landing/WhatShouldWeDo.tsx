@@ -50,7 +50,7 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
           </span>
 
           <h1 className="text-4xl text-corona-green mb-4">{title}</h1>
-          <p className="mb-8 leading-relaxed text-gray-500 text-sm sm:w-full p-2 space-y-2 w-4/5 lg:w-5/6">
+          <p className="mb-8 leading-relaxed text-gray-500 text-sm sm:w-full space-y-2 w-4/5 lg:w-5/6">
             {description}
           </p>
         </div>
@@ -61,7 +61,7 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
         >
           <Image
             className="object-cover object-center rounded"
-            alt="hero"
+            alt={title}
             src={require(`../../assets/${img}`)}
           />
         </div>
@@ -70,8 +70,12 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
   );
 
   const Component = () => (
-    <section className="min-h-screen" id="prevention">
-      <div className="container px-5  mx-auto mt-20  ">
+    <section className="min-h-screen relative overflow-hidden" id="prevention">
+      <div className="container px-5 mx-auto mt-20  ">
+      <div aria-hidden="true" className="absolute hidden sm:block  opacity-90 top-10 -left-40 ">
+        <Image src={require("../../assets/path1470.png")} className="mx-auto" alt="hero" />
+    </div>
+    
         <div className="flex flex-col text-center w-full mb-4">
           <h2 className="text-lg text-corona  font-medium title-font mb-1">
             Covid-19
@@ -84,7 +88,9 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
             and some cause disease. A newly identified type has caused
           </p>
         </div>
+      
       </div>
+     
       <div className="lg:p-10">
         {Data.map((item, i) => (
           <Content
@@ -95,6 +101,12 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
             img={item.img}
           />
         ))}
+        <div aria-hidden="true" className="absolute  bottom-80 md:right-20  w-[50px] h-[20px]">
+        <Image src={require("../../assets/path1470.png")} height={'100px'} width={'100px'}  className="sm:w-[10px] sm:h-[10px]  ml-3 mt-3" alt="hero" />
+    </div>
+         <div aria-hidden="true" className="absolute hidden sm:block bottom-10 -right-10 opacity-50">
+        <Image src={require("../../assets/path1471.png")} height={200} width={200} className="sm:w-[50x] sm:h-[52px] " alt="hero" />
+    </div>
       </div>
     </section>
   );

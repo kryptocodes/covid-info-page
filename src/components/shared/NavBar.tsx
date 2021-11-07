@@ -33,7 +33,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
 
   const NavBarComponent = () => (
     <>
-      <header className="text-gray-600 lg:mx-40">
+      <header className="text-gray-600 xl:mx-40">
         <div className="container mx-auto p-5 flex">
           <a className="md:flex flex items-center text-corona-green sm:block uppercase mb-4 md:mb-0">
             <Image

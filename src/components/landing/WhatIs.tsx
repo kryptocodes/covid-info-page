@@ -5,7 +5,7 @@ interface WhatIsProps {}
 
 const WhatIs: React.FC<WhatIsProps> = ({}) => {
   const Component = () => (
-    <section>
+    <section className="overflow-hidden relative">
       <div className="container mx-auto flex lg:px-5 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 sm:block md:order-first order-last">
           <Image
@@ -33,6 +33,12 @@ const WhatIs: React.FC<WhatIsProps> = ({}) => {
           </div>
         </div>
       </div>
+      <div aria-hidden="true" className="absolute  bottom-40 md:right-20  w-[50px] h-[20px] opacity-50">
+        <Image src={require("../../assets/path1471.png")} height={'100px'} width={'100px'}  className="sm:w-[10px] sm:h-[10px]  ml-3 mt-3" alt="hero" />
+    </div>
+         <div aria-hidden="true" className="absolute hidden sm:block bottom-0 -right-20 opacity-50">
+        <Image src={require("../../assets/path1471.png")} height={200} width={200} className="sm:w-[50x] sm:h-[52px] " alt="hero" />
+    </div>
     </section>
   );
   return (

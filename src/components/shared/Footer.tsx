@@ -43,6 +43,30 @@ const Footer: React.FC<FooterProps> = ({}) => {
             </button>
           </div>
         </div>
+        <div
+          aria-hidden="true"
+          className="absolute overflow-hidden   top-0 sm:right-20  w-[50px] h-[20px] opacity-50"
+        >
+          <Image
+            src={require("../../assets/path1471.png")}
+            height={"100px"}
+            width={"100px"}
+            className="sm:w-[10px] sm:h-[10px]  ml-3 mt-3"
+            alt="hero"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute hidden sm:block sm:top-20 -right-20 opacity-50"
+        >
+          <Image
+            src={require("../../assets/path1471.png")}
+            height={200}
+            width={200}
+            className="sm:w-[50x] sm:h-[52px] "
+            alt="hero"
+          />
+        </div>
       </div>
     </section>
   );
@@ -64,7 +88,11 @@ const Footer: React.FC<FooterProps> = ({}) => {
           </a>
           <span className="md:inline-flex grid grid-col-1 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4 ">
             {Data.map((item, index) => (
-              <a href={item?.link} key={index} className="ml-3 text-gray-500">
+              <a
+                href={item?.link}
+                key={index}
+                className="ml-3 hover:text-corona text-corona-green"
+              >
                 {item.name}
               </a>
             ))}
@@ -92,7 +120,6 @@ const Footer: React.FC<FooterProps> = ({}) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-              
                 viewBox="0 0 23 16"
               >
                 <path
@@ -109,7 +136,6 @@ const Footer: React.FC<FooterProps> = ({}) => {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 className="w-5 h-5"
-             
                 viewBox="0 0 21 18"
               >
                 <path
@@ -141,7 +167,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
 
   return (
     <>
-      <section>
+      <section className="relative overflow-hidden">
         <Contact />
         <FooterContent />
       </section>

@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Assignment -  Corona Info Page
 
-First, run the development server:
+![Screen_Shot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e09ee856-4373-49f6-b6bb-ed378b093823/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211107%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211107T055323Z&X-Amz-Expires=86400&X-Amz-Signature=5aba2cc4d5a47ffd4a0ca9588413c53316293ac599d1e654f5cea0630c526785&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+## Tech Stack
+- Next JS
+- Tailwind CSS
+
+## Structure
+
+Pages
+- index.tsx
+- _app.tsx
+
+Src/
+ - Components
+    - landing
+    - Map
+    - shared
+    - util
+ 
+ - Assets
+
+
+## API Reference
+
+`https://disease.sh/v3/covid-19/countries`
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/kryptocodes/covid-info-page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd covid-info-page
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Install dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  yarn
+```
 
-## Learn More
+Start the server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+   yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-## Deploy on Vercel
+## Issues
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to create an issue on this GitHub repository if you have any questions regarding this assignment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
