@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Virus from "../../assets/virus";
+import Fade from "react-reveal/Fade";
 
 interface heroProps {}
 
 const Hero: React.FC<heroProps> = ({}) => {
   const Component = () => (
     <>
+      <Fade cascade>
       <section className="text-gray-600 mx-auto relative overflow-hidden" id="overview">
         <div className="flex py-10 sm:py-24 md:flex-row flex-col xl:px-20 2xl:px-96 items-center text-left  ">
           <div className="lg:flex-grow md:w-1/2 sm:px-5 p-4 lg:px-10 md:px-5 lg:pr-24 sm:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 sm:items-center  ">
@@ -44,9 +46,12 @@ const Hero: React.FC<heroProps> = ({}) => {
     </div>
         </div>
       </section>
+      </Fade>
     </>
   );
-  return <Component />;
+  return (
+  <Component />
+  )
 };
 
 export default Hero;

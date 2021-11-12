@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import Head from "next/head";
+import config from 'react-reveal/globals';
+
+
 
 interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = ({}) => {
+  config({ ssrFadeout: true });
   const [menu, setMenu] = useState(false);
   let Location: any = undefined;
   if (typeof window !== "undefined") {
@@ -41,14 +45,16 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
               alt="logo"
               className="h-100 w-100 object-cover flex mx-auto "
             />
-            <span className="ml-3 text-xl text-uppercase font-bold">Covid-19</span>
+            <span className="ml-3 text-xl text-uppercase font-bold">
+              Covid-19
+            </span>
           </a>
-          <nav className="md:ml-auto flex flex-wrap p-4 items-center justify-center hidden md:block">
+          <nav className="md:ml-auto flex flex-wrap p-4 font-gelion font-semibold items-center justify-center hidden md:block">
             {Data.map((v, i) => (
               <a
                 href={v?.link}
                 key={i}
-                className={`mr-5 text-corona-green font-medium font-gelion hover:text-corona ${
+                className={`mr-5 text-corona-green hover:text-corona ${
                   Location === v?.link ? "text-corona" : ""
                 }`}
               >
@@ -56,7 +62,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
               </a>
             ))}
 
-            <button className="bg-transparent rounded-full border-2 border-corona px-6 p-2 text-corona hover:bg-corona hover:text-white  ">
+            <button className="bg-transparent rounded-full border-2 border-corona px-6 p-2  text-corona hover:bg-corona hover:text-white  ">
               Contact
             </button>
           </nav>
@@ -120,15 +126,14 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
                   </span>
                 ))}
                 <div className="-ml-2 pt-5">
-                <a
-                  href={"#contact"}
-                  className="bg-transparent rounded-full  border-2 border-corona px-4  py-2 text-corona hover:bg-corona hover:text-white  "
-                >
-                  Contact
-                </a>
+                  <a
+                    href={"#contact"}
+                    className="bg-transparent rounded-full  border-2 border-corona px-4  py-2 font-gelion text-corona hover:bg-corona hover:text-white  "
+                  >
+                    Contact
+                  </a>
+                </div>
               </div>
-              </div>
-
             </div>
           ) : (
             ""

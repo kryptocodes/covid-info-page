@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         'gelion': ['Gelion-Regular'],
       },
+      zIndex:{
+        '9999': 9999,
+      }
     },
   },
   variants: {

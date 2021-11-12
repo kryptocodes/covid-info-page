@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import Virus from "../../assets/virus";
+
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = ({}) => {
@@ -26,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
     <section id="contact">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center">
-          <h1 className="text-corona-green font-bold text-center text-2xl  md:text-4xl">
+          <h1 className="text-corona-green font-bold font-gelion text-center text-2xl  md:text-4xl">
             Have Question in mind? <br /> Let us help you
           </h1>
         </div>
@@ -38,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
             placeholder="snmonydemo@gmail.com"
           />
           <div className="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
-            <button className="bg-corona text-white text-base rounded-full px-4 py-2 font-thin">
+            <button className="bg-corona text-white text-base font-gelion rounded-full px-8 hover:bg-white border hover:border-corona hover:text-corona sm:px-12 py-2 font-thin">
               Send
             </button>
           </div>
@@ -47,25 +49,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
           aria-hidden="true"
           className="absolute hidden sm:block  top-0 sm:right-20  w-[50px] h-[20px] opacity-50"
         >
-          <Image
-            src={require("../../assets/path1471.png")}
-            height={"100px"}
-            width={"100px"}
-            className="sm:w-[10px] sm:h-[10px] "
-            alt="path1471"
-          />
+          <Virus width={100} height={100} />
         </div>
         <div
           aria-hidden="true"
-          className="absolute hidden sm:block sm:top-20 -right-20 opacity-50"
+          className="absolute hidden sm:block sm:top-10 -right-20 opacity-50"
         >
-          <Image
-            src={require("../../assets/path1471.png")}
-            height={200}
-            width={200}
-            className="sm:w-[50x] sm:h-[52px] "
-            alt="hero"
-          />
+          <Virus width={200} height={200} />
         </div>
       </div>
     </section>
@@ -73,9 +63,9 @@ const Footer: React.FC<FooterProps> = ({}) => {
 
   const FooterContent = () => (
     <>
-      <footer className="text-gray-600 body-font">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <footer className="text-gray-600 font-gelion ">
+        <div className="container  px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a className="flex font-medium items-center md:justify-start justify-center text-gray-900">
             <Image
               src={require("../../assets/logo.png")}
               alt="logo"
@@ -86,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
               Covid-19
             </span>
           </a>
-          <span className="md:inline-flex grid grid-col-1 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4 ">
+          <span className="md:inline-flex grid font-semibold grid-col-1 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4 ">
             {Data.map((item, index) => (
               <a
                 href={item?.link}
@@ -99,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
           </span>
 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-corona-green">
-            <a className="">
+            <a>
               <svg
                 fill="currentColor"
                 strokeLinecap="round"

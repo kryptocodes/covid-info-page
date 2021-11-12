@@ -3,6 +3,8 @@ import Stats from "../Map/Stats";
 
 import dynamic from "next/dynamic";
 import { SortData } from "../util/sortData";
+import Fade from "react-reveal/Fade";
+
 
 const LiveData: React.FC<any> = () => {
   const [mapCenter, setMapCenter] = React.useState({
@@ -37,18 +39,21 @@ const LiveData: React.FC<any> = () => {
     <>
       <div className="w-full mb-10">
         <div className="w-full  ">
+          <Fade right>
           <div
-            className="sm:absolute right-0 sm:mr-8 w-full sm:w-2/6 sm:-mt-4 "
-            style={{ zIndex: 9999 }}
+            className="sm:absolute right-0 sm:mr-8 w-full sm:w-2/6 sm:-mt-4 z-9999"
           >
             <Component />
           </div>
+          </Fade>
+          <Fade bottom>
           <MapWithNoSSR
             center={mapCenter}
             zoom={mapZoom}
             countries={mapCountries}
             caseType={"cases"}
           />
+          </Fade>
         </div>
       </div>
     </>
