@@ -49,8 +49,8 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
             0{i + 1}
           </span>
 
-          <h1 className="text-4xl text-corona-green mb-4">{title}</h1>
-          <p className="mb-8 leading-relaxed text-gray-500 text-sm sm:w-full space-y-2 w-4/5 lg:w-5/6">
+          <h1 className="text-4xl text-corona-green font-gelion font-semibold mb-4">{title}</h1>
+          <p className="mb-8 leading-8 font-gelion text-corona-black text-sm sm:w-full space-y-2 w-4/5 lg:w-5/6">
             {description}
           </p>
         </div>
@@ -77,13 +77,13 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
     </div>
     
         <div className="flex flex-col text-center w-full mb-4">
-          <h2 className="text-lg text-corona  font-medium title-font mb-1">
+          <h2 className="text-2xl text-corona  font-bold  mb-1">
             Covid-19
           </h2>
-          <h1 className="sm:text-3xl text-4xl font-medium title-font mb-4 text-corona-green">
+          <h1 className="sm:text-3xl text-4xl font-bold mb-4 text-corona-green">
             What Should We Do
           </h1>
-          <p className="lg:w-3/6 md:w-3/4 mx-auto text-gray-500 leading-relaxed text-base">
+          <p className="lg:w-3/6 md:w-3/4 mx-auto font-gelion leading-relaxed">
             Corona viruses are a type of virus. There are many different kinds,
             and some cause disease. A newly identified type has caused
           </p>

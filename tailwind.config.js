@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       colors: {
         'corona': '#FB4C47',
-        'corona-green': '#035755'
+        'corona-green': '#035755',
+        'corona-black': '#4B4F51',
+      },
+      fontFamily: {
+        'gelion': ['Gelion-Regular'],
       },
     },
   },

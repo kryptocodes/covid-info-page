@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
               width={50}
               height={50}
             />
-            <span className="ml-3 text-xl uppercase text-corona-green">
+            <span className="ml-3 text-xl uppercase text-corona-green font-bold">
               Covid-19
             </span>
           </a>

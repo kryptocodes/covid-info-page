@@ -41,14 +41,14 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
               alt="logo"
               className="h-100 w-100 object-cover flex mx-auto "
             />
-            <span className="ml-3 text-xl text-uppercase">Covid-19</span>
+            <span className="ml-3 text-xl text-uppercase font-bold">Covid-19</span>
           </a>
           <nav className="md:ml-auto flex flex-wrap p-4 items-center justify-center hidden md:block">
             {Data.map((v, i) => (
               <a
                 href={v?.link}
                 key={i}
-                className={`mr-5 text-corona-green hover:text-corona ${
+                className={`mr-5 text-corona-green font-medium font-gelion hover:text-corona ${
                   Location === v?.link ? "text-corona" : ""
                 }`}
               >
@@ -56,7 +56,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
               </a>
             ))}
 
-            <button className="bg-transparent rounded-full border-2 border-corona px-4 p-2 text-corona hover:bg-corona hover:text-white  ">
+            <button className="bg-transparent rounded-full border-2 border-corona px-6 p-2 text-corona hover:bg-corona hover:text-white  ">
               Contact
             </button>
           </nav>
@@ -99,19 +99,19 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
 
           {menu ? (
             <div
-              className="md:hidden  w-full mt-20 px-4 absolute inset-0  text-left overflow-hidden "
+              className="md:hidden  w-full mt-24 px-4 absolute inset-0  text-left overflow-hidden z-50 "
               id="mobile-menu"
             >
               <div
                 style={{ backgroundColor: "#FFF9F9" }}
-                className="pb-3  p-4 py-5 space-y-1"
+                className="p-4 py-5 pb-16  space-y-1"
               >
                 {Data.map((v, i) => (
                   <span key={i}>
                     <a
                       onClick={() => setMenu(!menu)}
                       href={v?.link}
-                      className={`block py-5 text-corona-green font-medium hover:text-corona ${
+                      className={`block py-5 text-corona-green font-semibold font-gelion hover:text-corona ${
                         Location === v?.link ? "text-corona" : ""
                       } `}
                     >
@@ -119,7 +119,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
                     </a>
                   </span>
                 ))}
-                <div className="-ml-1 ">
+                <div className="-ml-2 pt-5">
                 <a
                   href={"#contact"}
                   className="bg-transparent rounded-full  border-2 border-corona px-4  py-2 text-corona hover:bg-corona hover:text-white  "

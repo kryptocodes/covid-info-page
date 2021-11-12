@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Virus from "../../assets/virus";
 
 interface contagionProps {
   title: string;
@@ -35,7 +36,7 @@ const Contagion: React.FC<any> = ({}) => {
     image,
   }) => (
     <>
-      <div className="w-full bg-white z-50 rounded-lg lg:p-12 p-4 flex flex-col justify-center items-center border-b-4 hover:border-corona hover:shadow-lg">
+      <div className="w-full mb-4 bg-white h-full md:px-2  z-50 rounded-lg lg:p-10  p-4 flex flex-col justify-center items-center border-b-4 hover:border-corona hover:shadow-lg">
         <div className="mb-8">
           <Image
             className="object-center h-36 w-36"
@@ -44,8 +45,8 @@ const Contagion: React.FC<any> = ({}) => {
           />
         </div>
         <div className="text-center">
-          <p className="text-xl text-corona-green font-bold mb-2">{title}</p>
-          <p className="text-base text-gray-400 font-normal">{description}</p>
+          <p className="text-2xl text-corona-green font-bold font-gelion mb-2">{title}</p>
+          <p className="text-base text-corona-black md:p-2 font-normal font-gelion">{description}</p>
         </div>
       </div>
     </>
@@ -56,13 +57,13 @@ const Contagion: React.FC<any> = ({}) => {
       <section id="contagion">
         <div className="container px-5  mx-auto ">
           <div className="flex flex-col text-center w-full mb-20">
-            <h2 className="text-lg text-corona  font-medium title-font mb-1">
+            <h2 className="text-lg text-corona  font-bold title-font mb-1">
               Covid-19
             </h2>
-            <h1 className="sm:text-3xl text-4xl font-medium title-font mb-4 text-corona-green">
+            <h1 className="sm:text-3xl text-4xl font-bold title-font mb-4 text-corona-green">
               Contagion
             </h1>
-            <p className="lg:w-3/6 md:w-3/4 mx-auto text-gray-500 leading-relaxed text-base">
+            <p className="lg:w-3/6 md:w-3/4 mx-auto text-gray-500 font-gelion leading-relaxed text-base">
               Corona viruses are a type of virus. There are many different
               kinds, and some cause disease. A newly identified type
             </p>
@@ -73,21 +74,19 @@ const Contagion: React.FC<any> = ({}) => {
             aria-hidden="true"
             className="absolute z-0 hidden sm:block bottom-10 left-0 w-[50px] h-[20px] rounded-full grid place-items-center"
           >
-            <Image
-              src={require("../../assets/path1471.png")}
-              className="sm:w-[50x]  overflow-hidden sm:h-[52px] "
-              alt="hero"
-            />
+            <Virus className="w-52" />
           </div>
+         
           {Data.map((item, index) => (
-            <React.Fragment key={index}>
+          <div className="p-2 sm:p-0 z-50 h-full" key={index}>
               <CardComponent
                 title={item?.title}
                 description={item?.description}
                 image={item?.image}
               />
-            </React.Fragment>
+          </div> 
           ))}
+          
         </div>
       </section>
     </>
