@@ -46,14 +46,12 @@ const LiveData: React.FC<any> = () => {
             <Component />
           </div>
           </Fade>
-          <Fade bottom>
           <MapWithNoSSR
             center={mapCenter}
             zoom={mapZoom}
             countries={mapCountries}
             caseType={"cases"}
           />
-          </Fade>
         </div>
       </div>
     </>
