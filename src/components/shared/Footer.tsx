@@ -47,13 +47,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div
           aria-hidden="true"
-          className="absolute hidden sm:block  top-0 sm:right-20  w-[50px] h-[20px] opacity-50"
+          className="absolute hidden sm:block  top-0 sm:right-20  w-[50px] h-[20px] opacity-20"
         >
           <Virus width={100} height={100} />
         </div>
         <div
           aria-hidden="true"
-          className="absolute hidden sm:block sm:top-10 -right-20 opacity-50"
+          className="absolute hidden sm:block sm:top-10 -right-20 opacity-20"
         >
           <Virus width={200} height={200} />
         </div>

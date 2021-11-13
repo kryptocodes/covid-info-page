@@ -9,9 +9,9 @@ const Hero: React.FC<heroProps> = ({}) => {
   const Component = () => (
     <>
       <Fade cascade>
-      <section className="text-gray-600 mx-auto relative overflow-hidden" id="overview">
-        <div className="flex py-10 sm:py-24 md:flex-row flex-col xl:px-20 2xl:px-96 items-center text-left  ">
-          <div className="lg:flex-grow md:w-1/2 sm:px-5 p-4 lg:px-10 md:px-5 lg:pr-24 sm:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 sm:items-center  ">
+      <section className="mx-auto relative overflow-hidden" id="overview">
+        <div className="flex py-10 sm:py-20 md:flex-row flex-col xl:px-20 2xl:px-96 items-center text-left  ">
+          <div className="lg:flex-grow md:w-4/6 sm:px-5 p-4 lg:px-10 md:px-12 lg:pr-24 sm:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 sm:items-center  ">
             <h1 className=" sm:text-2xl text-2xl mb-2 text-corona font-bold">
               COVID-19 Alert
             </h1>

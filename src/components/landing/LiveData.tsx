@@ -39,7 +39,7 @@ const LiveData: React.FC<any> = () => {
     <>
       <div className="w-full mb-10">
         <div className="w-full  ">
-          <Fade right>
+          <Fade bottom>
           <div
             className="sm:absolute right-0 sm:mr-8 w-full sm:w-2/6 sm:-mt-4 z-9999"
           >

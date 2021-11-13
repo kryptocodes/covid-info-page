@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Virus from "../../assets/virus";
 
 import Fade from "react-reveal/Fade";
@@ -10,7 +9,7 @@ interface WhatIsProps {}
 const WhatIs: React.FC<WhatIsProps> = ({}) => {
   const Component = () => (
     <Fade bottom cascade> 
-    <section className="overflow-hidden mb-20 relative">
+    <section className="overflow-hidden py-8 relative">
       <div className="container mx-auto flex lg:px-5 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 sm:block md:order-first order-last">
           <What_Is className="object-cover object-center z-9999"/>

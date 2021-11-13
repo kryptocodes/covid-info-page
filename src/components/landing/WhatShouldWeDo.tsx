@@ -60,7 +60,7 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
           <h1 className="text-4xl text-corona-green font-gelion font-semibold mb-4">
             {title}
           </h1>
-          <p className="mb-8 z-50 leading-8 font-gelion text-corona-black text-sm w-full space-y-2 w-4/5 lg:w-5/6">
+          <p className="mb-8 z-50 leading-8 font-gelion text-corona-black text-sm w-full space-y-2 lg:w-5/6">
             {description}
           </p>
         </div>
@@ -85,7 +85,7 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
       <div className="container px-5 mx-auto mt-20  ">
         <div
           aria-hidden="true"
-          className="absolute hidden sm:block  opacity-90 top-10 -left-20 "
+          className="absolute hidden sm:block  opacity-90 top-10 -left-28 "
         >
           <Virus width={200} height={200} color={"true"} />
         </div>
@@ -118,13 +118,13 @@ const WhatShouldWeDo: React.FC<any> = ({}) => {
         <Fade bottom cascade>
         <div
           aria-hidden="true"
-          className="absolute hidden sm:block  bottom-80 md:right-20"
+          className="absolute hidden lg:block  bottom-80 md:right-20 opacity-20"
         >
-          <Virus width={100} height={100} color={"true"} />
+          <Virus width={100} height={100} color={"true"} className="opacity-20" />
         </div>
         <div
           aria-hidden="true"
-          className="absolute hidden sm:block bottom-10 -right-10 opacity-50"
+          className="absolute hidden lg:block bottom-10 -right-10 opacity-20"
         >
           <Virus width={200} height={200} />
         </div>
